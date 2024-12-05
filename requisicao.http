@@ -1,0 +1,56 @@
+
+# Para criar um Usuario
+POST http://localhost:4000/users/register
+content-type: application/json
+
+{
+    "username": "SP-635.666-GNF",
+    "password": "this"
+}
+
+### Para fazer login
+POST http://localhost:4000/users/login
+content-type: application/json
+
+{
+    "username": "SP-635.666-GNF",
+    "password": "this"
+}
+
+###
+#Para adicionar um setor ao Usuario
+
+POST http://localhost:4000/setores
+content-type: application/json
+
+{
+  "name": "CORREDOR",
+  "userId": 16
+}
+
+###Para fazer o get de setores asocciadoados a o seu uruario
+GET http://localhost:4000/setores/16
+
+
+
+### Criaçao de leito
+POST http://localhost:4000/leitos
+content-type: application/json
+
+{
+  "number": "16",
+  "setorId": 18
+}
+
+#par selecionar os leitos
+###
+
+GET http://localhost:4000/leitos/setor/14
+
+
+###
+
+# criar leito
+# conectar todos sistma e hospodear
+# comprar o dominio
+# criar a api fake no supabase
